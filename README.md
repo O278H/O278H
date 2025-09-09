@@ -48,5 +48,6 @@
 ✨ *Always learning, building, and growing as a developer.*  
 
 ## 🐍 Snake animation
-![Snake animation](https://github.com/O278H/O278H/blob/output/github-contribution-grid-snake.svg)
+![Snake animation](https://raw.githubusercontent.com/O278H/O278H/output/github-contribution-grid-snake.svg)
+
 
