@@ -2,24 +2,23 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs every day at midnight UTC
-  workflow_dispatch:
+    - cron: "0 0 * * *"   # runs nightly at 00:00 UTC
+  workflow_dispatch:       # allows manual run from Actions tab
 
 permissions:
-  contents: write
+  contents: write          # needed to push the SVG to the repo
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Generate snake animation
         uses: Platane/snk@v3
-       with:
-  github_user_name: 0278h
-
+        with:
+          github_user_name: O278h          # <-- your exact login (zero + lowercase h)
           outputs: dist/snake.svg
 
       - name: Push snake.svg to output branch
