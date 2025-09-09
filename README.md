@@ -41,3 +41,6 @@
 
 ---
 ✨ *Always learning, building, and growing as a developer.*
+## 🐍 Snake animation
+
+![Snake animation](https://github.com/0278H/0278H/blob/output/github-contribution-grid-snake.svg)
