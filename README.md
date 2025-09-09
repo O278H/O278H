@@ -29,8 +29,8 @@
 ---
 
 ## 📊 GitHub Stats  
-![Omar's GitHub stats](https://github-readme-stats.vercel.app/api?username=0278h&show_icons=true&theme=tokyonight)  
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=0278h&layout=compact&theme=tokyonight)
+![Omar's GitHub stats](https://github-readme-stats.vercel.app/api?username=0278H&show_icons=true&theme=tokyonight)  
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=0278H&layout=compact&theme=tokyonight)
 
 ---
 
