@@ -17,9 +17,7 @@
 ---
 
 ## 📄 Resume
-**📄 [View my Resume →](https://0278H.github.io/resume/)**
-
-
+**📄 [View my Resume →](https://0278h.github.io/resume/)**
 
 ---
 
