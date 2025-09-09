@@ -29,8 +29,10 @@
 ---
 
 ## 📊 GitHub Stats  
-![Omar's GitHub stats](https://github-readme-stats.vercel.app/api?username=0278H&show_icons=true&theme=tokyonight)  
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=0278H&layout=compact&theme=tokyonight)
+
+![Profile Views](https://komarev.com/ghpvc/?username=0278H&color=blueviolet)  
+![Followers](https://img.shields.io/github/followers/0278H?label=Followers&style=social)  
+![Stars](https://img.shields.io/github/stars/0278H?affiliations=OWNER%2CCOLLABORATOR&style=social)
 
 ---
 
