@@ -17,7 +17,8 @@
 ---
 
 ## 📄 Resume
-**📄 [View my Resume →](https://0278h.github.io/resume/)**
+[![Resume](https://img.shields.io/badge/View%20Resume-0A66C2?style=for-the-badge&logo=readthedocs&logoColor=white)](https://0278h.github.io/resume/)
+
 
 ---
 
