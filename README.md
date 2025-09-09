@@ -17,7 +17,8 @@
 ---
 
 ## 📄 Resume
-[[View my Resume](https://0278h.github.io/resume/)](https://o278h.github.io/resume/)
+[Omar Alhabeel – Resume](https://0278h.github.io/resume/)
+
 
 
 
