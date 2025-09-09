@@ -17,32 +17,31 @@
 ---
 
 ## 📄 Resume
-[View my Resume](https://o278h.github.io/resume/)
-
-
+[View my Resume](https://O278H.github.io/resume/)
 
 ---
 
 ## 🎮 Projects  
-- [Snake Game Live](https://0278h.github.io/snake-game/) 🐍  
+- [Snake Game Live](https://O278H.github.io/snake-game/) 🐍  
 - Portfolio Website 🌐 *(coming soon)*  
 - Task Manager CLI with Python + SQLite 🗂️ *(in progress)*  
 
 ---
 
 ## 📊 GitHub Stats  
-
-![Profile Views](https://komarev.com/ghpvc/?username=0278H&color=blueviolet)  
+![Profile Views](https://komarev.com/ghpvc/?username=O278H&color=blueviolet)  
 ![Repos](https://img.shields.io/badge/Public%20Repos-2-blue)  
 ![Contributions](https://img.shields.io/badge/Contributions-Active-brightgreen)  
 
+---
 
 ## 🤝 Connect with Me  
 - [LinkedIn](https://www.linkedin.com/in/omar-alhabeel-8a45482b2)  
-- [GitHub](https://github.com/0278H)  
+- [GitHub](https://github.com/O278H)  
 
 ---
-✨ *Always learning, building, and growing as a developer.*
-## 🐍 Snake animation
 
-![Snake animation](https://github.com/0278H/0278H/blob/output/github-contribution-grid-snake.svg)
+✨ *Always learning, building, and growing as a developer.*  
+
+## 🐍 Snake animation  
+![Snake animation](https://github.com/O278H/O278H/blob/output/github-contribution-grid-snake.svg)
