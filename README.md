@@ -19,6 +19,7 @@
 ## 📄 Resume
 [View my Resume](https://O278H.github.io/resume/)
 
+
 ---
 
 ## 🎮 Projects  
