@@ -17,7 +17,8 @@
 ---
 
 ## 📄 Resume
-[View my Resume](https://O278H.github.io/resume/)
+[View my Resume](https://o278h.github.io/resume/)
+
 
 
 ---
