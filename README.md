@@ -31,10 +31,9 @@
 ## 📊 GitHub Stats  
 
 ![Profile Views](https://komarev.com/ghpvc/?username=0278H&color=blueviolet)  
-![Followers](https://img.shields.io/github/followers/0278H?label=Followers&style=social)  
-![Stars](https://img.shields.io/github/stars/0278H?affiliations=OWNER%2CCOLLABORATOR&style=social)
+![Repos](https://img.shields.io/badge/Public%20Repos-2-blue)  
+![Contributions](https://img.shields.io/badge/Contributions-Active-brightgreen)  
 
----
 
 ## 🤝 Connect with Me  
 - [LinkedIn](https://www.linkedin.com/in/omar-alhabeel-8a45482b2)  
