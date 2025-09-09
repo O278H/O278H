@@ -17,7 +17,7 @@
 ---
 
 ## 📄 Resume
-[Omar Alhabeel – Resume](https://0278h.github.io/resume/)
+[Omar Alhabeel – Resume](https://O278h.github.io/resume/)
 
 
 
