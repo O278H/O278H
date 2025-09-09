@@ -1,16 +1,14 @@
-## Hi there 👋
+# Hi, I’m Omar Alhabeel 👋
 
-<!--
-**O278H/O278H** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🎓 Computer Science student @ York University  
+💻 Aspiring Software Engineer | Interested in Web Dev & Databases  
 
-Here are some ideas to get you started:
+## 📄 Resume  
+[View my Resume](https://github.com/0278H/resume)  
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🎮 Projects  
+- [Snake Game Live](https://0278h.github.io/snake-game/)  
+
+## 📫 Connect with Me  
+- [LinkedIn](https://www.linkedin.com/in/omar-alhabeel-8a45482b2)  
+- [GitHub](https://github.com/0278H)  
