@@ -26,10 +26,12 @@
 ---
 
 ## 🎮 Projects  
-- [Snake Game Live](https://O278H.github.io/snake-game/) 🐍  
-- [Lily Flower Animation](https://o278h.github.io/lily-love/) 🌸 *(interactive web animation)*  
-- Portfolio Website 🌐 *(coming soon)*  
-- Task Manager CLI with Python + SQLite 🗂️ *(in progress)*  
+- [🐦 Flappy Bird Game (Live)](https://o278h.github.io/Flappy-bird-game/)  
+- [🌍 Earth Animation](https://o278h.github.io/Earth-Animation/)  
+- [🐍 Snake Game Live](https://o278h.github.io/snake-game/)  
+- [🌸 Lily Flower Animation](https://o278h.github.io/lily-love/) *(interactive web animation)*  
+- 🌐 Portfolio Website *(coming soon)*  
+- 🗂️ Task Manager CLI with Python + SQLite *(in progress)*  
 
 ---
 
