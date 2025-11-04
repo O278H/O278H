@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Rotating Earth Animation 🌍</title>
+<style>
+  :root{
+    --spin-duration:12s;
+    --map-offset:0px;
+    --light-x:50%;
+    --light-y:50%;
+  }
+
+  /* Full background + center layout */
+  html,body{height:100%;}
+  body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    color:#fff;
+    background: radial-gradient(ellipse at bottom, #0b132b 0%, #000 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+  }
+
+  .container{
+    text-align:center;
+    perspective:800px;
+  }
+
+  h1{
+    margin:0 0 40px;
+    font-size:1.8rem;
+    letter-spacing:1px;
+    line-height:1.3;
+    text-shadow:0 0 10px rgba(0,0,0,0.5);
+    margin-left: -60px;
+    
+  }
+
+  /* Top-right control panel */
+  .ui{
+    position:fixed;
+    top:20px;
+    right:25px;
+    z-index:10;
+    background:rgba(0,0,0,0.35);
+    padding:8px 14px;
+    border-radius:12px;
+    font-size:14px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    backdrop-filter:blur(6px);
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+  }
+  .ui input[type="range"]{width:120px;}
+
+  /* Star background layers */
+  .stars{
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    background:transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    pointer-events:none;
+    z-index:0;
+    opacity:.5;
+  }
+  .layer-1{animation:starsDrift 16s linear infinite;}
+  .layer-2{animation:starsDrift 24s linear infinite;opacity:.35;filter:blur(.3px);}
+  @keyframes starsDrift{from{transform:translateY(0);}to{transform:translateY(-120px);}}
+
+  /* The rotating globe */
+  .globe{
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    position:relative;
+    z-index:2;
+    transform:rotateZ(23.5deg);
+    animation:spin var(--spin-duration) linear infinite, glow 3s ease-in-out infinite alternate;
+    background:
+      url('earthmap.jpg'),
+      radial-gradient(120% 120% at 30% 30%, rgba(255,255,255,.18), rgba(0,0,0,0) 60%);
+    background-repeat:repeat-x,no-repeat;
+    background-size:auto 100%,cover;
+    background-position:var(--map-offset) center,center;
+    box-shadow:0 0 40px rgba(0,191,255,.5),inset -20px 0 50px rgba(0,0,0,.7);
+    filter:saturate(1.15) brightness(1.06);
+    will-change:background-position,transform,box-shadow;
+    -webkit-mask-image:radial-gradient(160% 160% at var(--light-x) var(--light-y),
+      rgba(0,0,0,1) 40%,rgba(0,0,0,.8) 60%,rgba(0,0,0,.65) 72%,rgba(0,0,0,.5) 82%,rgba(0,0,0,.35) 88%,rgba(0,0,0,0) 100%);
+            mask-image:radial-gradient(160% 160% at var(--light-x) var(--light-y),
+      rgba(0,0,0,1) 40%,rgba(0,0,0,.8) 60%,rgba(0,0,0,.65) 72%,rgba(0,0,0,.5) 82%,rgba(0,0,0,.35) 88%,rgba(0,0,0,0) 100%);
+  }
+
+  .globe::after{
+    content:"";
+    position:absolute;
+    inset:-8px;
+    border-radius:50%;
+    box-shadow:0 0 60px rgba(0,191,255,.45),0 0 120px rgba(0,191,255,.25);
+    z-index:-1;
+  }
+
+  /* Optional clouds layer (if you have clouds.png in folder) */
+  .globe::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:url('clouds.png') repeat-x;
+    background-size:auto 100%;
+    mix-blend-mode:screen;
+    opacity:.35;
+    pointer-events:none;
+    animation:cloudsSpin calc(var(--spin-duration) * 1.8) linear infinite;
+    filter:brightness(1.15) contrast(1.05);
+  }
+
+  /* Animations */
+  @keyframes spin{from{background-position-x:0px;}to{background-position-x:-520px;}}
+  @keyframes cloudsSpin{from{background-position-x:0px;}to{background-position-x:-520px;}}
+  @keyframes glow{
+    from{box-shadow:0 0 30px rgba(0,191,255,.3),inset -20px 0 50px rgba(0,0,0,.7);}
+    to{box-shadow:0 0 60px rgba(0,191,255,.9),inset -20px 0 50px rgba(0,0,0,.7);}
+  }
+</style>
+</head>
+
+<body>
+  <!-- Fixed top-right controls -->
+  <div class="ui">
+    <label>Speed <span id="spdVal">12s</span>
+      <input id="speed" type="range" min="4" max="30" value="12">
+    </label>
+    <label><input id="cloudsToggle" type="checkbox" checked> Clouds</label>
+  </div>
+
+  <div class="container">
+    <h1>🌍 Rotating Earth Animation</h1>
+    <div class="stars layer-1"></div>
+    <div class="stars layer-2"></div>
+    <div class="globe" id="globe"></div>
+  </div>
+
+<script>
+  const globe = document.getElementById('globe');
+  const speed = document.getElementById('speed');
+  const spdVal = document.getElementById('spdVal');
+  const cloudsToggle = document.getElementById('cloudsToggle');
+
+  // Speed control
+  const setSpeed = s => {
+    document.documentElement.style.setProperty('--spin-duration', `${s}s`);
+    spdVal.textContent = `${s}s`;
+  };
+  setSpeed(speed.value);
+  speed.addEventListener('input', e => setSpeed(e.target.value));
+
+  // Toggle clouds
+  cloudsToggle.addEventListener('change', e => {
+    globe.style.setProperty('--cloudOpacity', e.target.checked ? '.35' : '0');
+    globe.style.opacity = 1;
+  });
+
+  // Mouse lighting + subtle wobble
+  document.addEventListener('mousemove', (e) => {
+    const xPct = (e.clientX / window.innerWidth) * 100;
+    const yPct = (e.clientY / window.innerHeight) * 100;
+    document.documentElement.style.setProperty('--light-x', `${xPct}%`);
+    document.documentElement.style.setProperty('--light-y', `${yPct}%`);
+
+    const wobX = (window.innerWidth/2 - e.pageX) / 90;
+    const wobY = (window.innerHeight/2 - e.pageY) / 90;
+    globe.style.transform = `rotateZ(23.5deg) rotateY(${wobX}deg) rotateX(${wobY}deg)`;
+  });
+
+  // Drag to spin manually
+  let dragging=false, startX=0, startOffset=0;
+  const mapWidthPx = () => globe.offsetHeight * 2;
+  const getOffset = () =>
+    parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--map-offset')) || 0;
+  const setOffset = (px) => {
+    const width = mapWidthPx();
+    let v = px % width; if(v>0)v-=width;
+    document.documentElement.style.setProperty('--map-offset', `${v}px`);
+  };
+
+  globe.addEventListener('mousedown', (e)=>{
+    dragging=true; startX=e.clientX; startOffset=getOffset();
+    globe.style.animationPlayState='paused'; document.body.style.cursor='grabbing';
+  });
+  window.addEventListener('mouseup', ()=>{
+    if(!dragging)return;
+    dragging=false; globe.style.animationPlayState='running'; document.body.style.cursor='';
+  });
+  window.addEventListener('mousemove', (e)=>{
+    if(!dragging)return;
+    setOffset(startOffset - (e.clientX - startX));
+  });
+</script>
+</body>
+</html>
